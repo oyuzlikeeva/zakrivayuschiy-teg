@@ -4,12 +4,14 @@
     src: url(./Inter-Variable.woff2) format('woff');
     font-weight: normal;
     font-display: swap;
+    font-variation-settings: normal;
   }
   
   @font-face {
     font-family: 'PressStart2P Regular';
     src: url(./PressStart2P-Regular.woff) format('woff');
     font-weight: bold;
+    font-variation-settings: normal;
     font-display: swap;
   }
   

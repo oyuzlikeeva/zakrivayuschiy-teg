@@ -13,6 +13,12 @@
 
     --main-font: 'Inter Variable';
     --accent-font: 'PressStart2P Regular';
+    
+    .page::after {
+        opacity: 0.5;
+        /* background-image:  linear-gradient(var(--text-color) 1px, transparent 1px), linear-gradient(to right, var(--text-color) 1px, transparent 1px); */
+        background-image:  url(../images/pattern-dark.svg);
+    }
 }
 
 .theme-light {
@@ -23,4 +29,10 @@
 
     --main-font: 'Inter Variable';
     --accent-font: 'PressStart2P Regular';
+
+    .page::after {
+        opacity: 0.5;
+        /* background-image:  linear-gradient(var(--text-color) 1px, transparent 1px), linear-gradient(to right, var(--text-color) 1px, transparent 1px); */
+        background-image:  url(../images/pattern-light.svg);
+    }
 }

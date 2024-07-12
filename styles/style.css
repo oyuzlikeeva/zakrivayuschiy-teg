@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -23,7 +22,7 @@
   color: var(--text-color)
 }
 
-body::after {
+.page::after {
   content: '';
   display: block;
   position: absolute;
@@ -31,7 +30,6 @@ body::after {
   aspect-ratio: 4 / 3;
   background-color: transparent;
   opacity: 0.5;
-  background-image:  linear-gradient(var(--text-color) 1px, transparent 1px), linear-gradient(to right, var(--text-color) 1px, transparent 1px);
   background-size: 4px 4px;
   z-index: 1;
   top: 0;
@@ -49,8 +47,16 @@ body::after {
   font-family: var(--accent-font);
   font-size: 14px;
   font-weight: 400;
-  line-height: 12.6px;
-  
+  line-height: 12.6px; 
+  cursor: pointer;
+}
+
+.button:hover {
+
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0px 0px #000000;
 }
 
 .button_icon {
@@ -113,6 +119,13 @@ body::after {
   line-height: 14px;
   text-align: left;
   text-transform: uppercase;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover,
+.theme-menu__button:focus {
+  color: rgb(from var(--text-color) r g b / 50%);
+  outline: none;
 }
 
 .theme-menu__button:disabled {
@@ -161,13 +174,24 @@ body::after {
 }
 
 .article__image {
+  display: flex;
+
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
 }
 
+.article__text {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  border-top: 2px solid var(--text-color);
+  padding: 26px 24px;
+}
+
 .article__paragraph {
-  padding: 20px 24px 8px;
+  /* margin-bottom: 26px; */
 }
 
 .article__bottom {
@@ -175,7 +199,7 @@ body::after {
   align-items: end;
   gap: 8px;
 
-  padding: 16px 24px 26px;
+  padding: 0 24px 26px;
   width: fit-content;
   margin-inline-start: auto;
 }
@@ -192,15 +216,27 @@ body::after {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 4px;
+  gap: 8px;
 
   padding: 16px 20px;
   line-height: 12.6px;
+  color: var(--text-color);
+  fill: currentColor;
 }
 
 .button_icon__image {
   width: 21px;
   height: 21px;
+}
+
+.floppy {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.floppy-svg {
+  color:blue;
+  fill: currentColor;
 }
 
 @media (width <= 440px) {
@@ -244,6 +280,7 @@ body::after {
     flex-direction: column;
     gap: 0;
     padding: 13px 20px;
+    color: var(--text-color);
   }
 
   .button_icon__image {
