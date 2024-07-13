@@ -22,8 +22,6 @@
     }
 
     .page::after {
-        opacity: 0.5;
-        /* background-image:  linear-gradient(var(--text-color) 1px, transparent 1px), linear-gradient(to right, var(--text-color) 1px, transparent 1px); */
         background-image:  url(../images/pattern-dark.svg);
     }
 
@@ -41,8 +39,6 @@
     }
 
     .page::after {
-        opacity: 0.5;
-        /* background-image:  linear-gradient(var(--text-color) 1px, transparent 1px), linear-gradient(to right, var(--text-color) 1px, transparent 1px); */
         background-image:  url(../images/pattern-light.svg);
     }
 }

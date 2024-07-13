@@ -51,10 +51,6 @@
   cursor: pointer;
 }
 
-.button:hover {
-
-}
-
 .button:focus {
   box-shadow: 2px 2px 0px 0px #000000;
 }
@@ -124,21 +120,39 @@
 
 .theme-menu__button:hover,
 .theme-menu__button:focus {
-  color: rgb(from var(--text-color) r g b / 50%);
   outline: none;
 }
 
 .theme-menu__button:disabled {
   position: relative;
-  color: rgb(from var(--text-color) r g b / 50%);
+  color: rgb(from var(--text-color) r g b / 60%);
 }
 
 .theme-menu__button:disabled::before {
   content: '\25B6';
   position: absolute;
   left: -20px;
-  color: rgb(from var(--text-color) r g b / 50%);
+  color: rgb(from var(--text-color) r g b / 60%);
+  animation: move 1s infinite ease-out reverse;
 }
+
+@keyframes move {
+  0% {
+    left: -20px;
+  }
+  25% {
+    left: -18px;
+  }
+  50% {
+    left: -20px;
+  }
+  75% {
+    left: -22px;
+  }
+  100% {
+    left: -20px;
+  }
+} 
 
 .main-content {
   max-width: 700px;
