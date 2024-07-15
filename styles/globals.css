@@ -51,3 +51,10 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter Variable";
+    font-weight: 350 900;
+  }
+}
