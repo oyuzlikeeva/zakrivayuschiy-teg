@@ -20,7 +20,8 @@
   padding-top: 7%;
   background: var(--main-bg-color);
   color: var(--text-color);
-  font-variation-settings: 'Inter Variable', 785;
+  font-family: "Inter Variable";
+  font-variation-settings: "wght" 785;
 }
 
 .page::after {
@@ -201,6 +202,13 @@
 
   border-top: 2px solid var(--text-color);
   padding: 26px 24px;
+}
+
+.card__like-button:focus {
+  outline: none;
+  -webkit-box-shadow: 2px 2px 0px 0px var(--accent-color);
+  -moz-box-shadow: 2px 2px 0px 0px var(--accent-color);
+  box-shadow: 2px 2px 0px 0px rgba(var(--text-color), 1);
 }
 
 .article__paragraph {
