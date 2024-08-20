@@ -19,7 +19,8 @@
   min-block-size: 100dvb;
   padding-top: 7%;
   background: var(--main-bg-color);
-  color: var(--text-color)
+  color: var(--text-color);
+  font-variation-settings: 'Inter Variable', 785;
 }
 
 .page::after {
