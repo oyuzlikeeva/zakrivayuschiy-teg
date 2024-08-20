@@ -206,6 +206,7 @@
 
 .card__like-button {
   position: relative;
+  z-index: 1;
 }
 
 .card__like-button:focus {
@@ -218,19 +219,38 @@
 
 .card__like-button::before {
   content: '';
+  transform: scaleX(0);
+  z-index: 2;
 }
 
 .card__like-button:hover::before {
   content: '';
   position: absolute;
   inset: 0;
-  transform: scaleX(0);
-  -webkit-transform: scaleX(0);
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
   transition: 0.5s ease-in-out transform;
-  width: 100%;
-  height: 100%;
   background: var(--text-color);
 }
+
+.card__like-button:hover>.button__text {
+  animation: text 0.5s ease-in-out;
+  color: var(--main-bg-color);
+}
+
+.button__text {
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes text {
+  0% {
+    color: var(--text-color);
+  }
+  100% {
+    color: var(--main-bg-color);
+  }
+} 
 
 .article__bottom {
   display: flex;
