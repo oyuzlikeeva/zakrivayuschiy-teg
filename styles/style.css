@@ -19,7 +19,9 @@
   min-block-size: 100dvb;
   padding-top: 7%;
   background: var(--main-bg-color);
-  color: var(--text-color)
+  color: var(--text-color);
+  font-family: "Inter Variable";
+  font-variation-settings: "wght" 785;
 }
 
 .page::after {
@@ -42,7 +44,6 @@
   border: 2px solid var(--text-color);
   border-radius: 0;
   background: none;
-
   font-family: var(--accent-font);
   font-size: 14px;
   font-weight: 400;
@@ -203,8 +204,12 @@
   padding: 26px 24px;
 }
 
-.article__paragraph {
-  /* margin-bottom: 26px; */
+.card__like-button:focus {
+  --shadow: var(--shadow-rgb);
+  outline: none;
+  -webkit-box-shadow: 2px 2px 0px 0px rgba(var(--shadow-rgb), 1);
+  -moz-box-shadow: 2px 2px 0px 0px rgba(var(--shadow-rgb), 1);
+  box-shadow: 2px 2px 0px 0px rgba(var(--shadow-rgb), 1);
 }
 
 .article__bottom {

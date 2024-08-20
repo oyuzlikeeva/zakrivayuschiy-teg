@@ -55,6 +55,6 @@ ol {
 @supports (font-variation-settings: normal) {
   body {
     font-family: "Inter Variable";
-    font-weight: 350 900;
+    font-variation-settings: "wght" 785,"wght" 400;
   }
 }
